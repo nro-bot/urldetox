@@ -8,6 +8,7 @@ import logging
 from logging import Formatter, FileHandler
 from forms import *
 import os
+import clean
 
 #----------------------------------------------------------------------------#
 # App Config.
@@ -41,32 +42,13 @@ def login_required(test):
 #----------------------------------------------------------------------------#
 
 
-@app.route('/')
+@app.route('/', methods=['GET','POST'])
 def home():
-    return render_template('pages/placeholder.home.html')
-
-
-# @app.route('/about')
-# def about():
-    # return render_template('pages/placeholder.about.html')
-
-
-# @app.route('/login')
-# def login():
-    # form = LoginForm(request.form)
-    # return render_template('forms/login.html', form=form)
-
-
-# @app.route('/register')
-# def register():
-    # form = RegisterForm(request.form)
-    # return render_template('forms/register.html', form=form)
-
-
-# @app.route('/forgot')
-# def forgot():
-    # form = ForgotForm(request.form)
-    # return render_template('forms/forgot.html', form=form)
+    if request.method == 'POST':
+        url = request.form['inputURLString']
+        foo = clean.clean_url(url)
+    else:
+        return render_template('pages/home.html')
 
 # Error handlers.
 

@@ -1,0 +1,39 @@
+{% extends 'layouts/main.html' %}
+{% block title %}URL Detox (by nouyang){% endblock %}
+
+{% block jumbo %}
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <p class="pull-center"><h1>URL Detox</h1>
+          <hr class="my-4">
+
+        <p>I got fed up with links that are stupidly long so that companies can track my web
+        activity, so I wrote a little script to remove the excess.</p>
+
+          <hr class="my-4">
+    <legend>Enter your URL below:</legend>
+    <div class="form-group">
+      <!--<label for="inputURL" class="col-lg-4 control-label">URL</label>-->
+      <div class="input-group">
+
+        <input class="form-control" id="inputURL" name="inputURLString"
+            placeholder="e.g. http://www.google.com/search?&q=nyancat" type="text">
+
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="submit">Detox it!</button>
+            </span>
+      </div>
+    </div>
+
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+        <!--<div class="form-group">-->
+      <!--<div class="col-lg-10 col-lg-offset-2">-->
+        <!--<button type="reset" class="btn btn-default">Cancel</button>-->
+        <!--<button type="submit" class="btn btn-primary">Submit</button>-->
+      <!--</div>-->
+    <!--</div>-->
+
+{% endblock %}

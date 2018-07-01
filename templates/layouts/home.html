@@ -4,7 +4,7 @@
 {% block jumbo %}
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1>URL Detox</h1>
+        <p class="pull-center"><h1>URL Detox</h1>
           <hr class="my-4">
 
         <p>I got fed up with links that are stupidly long so that companies can track my web
@@ -12,15 +12,19 @@
 
           <hr class="my-4">
     <legend>Enter your URL below:</legend>
+
+
     <div class="form-group">
-      <!--<label for="inputURL" class="col-lg-4 control-label">URL</label>-->
+     <form action="." method="POST">
       <div class="input-group">
-        <input class="form-control" id="inputURL"
-        placeholder="e.g. http://www.google.com/search?&q=nyancat" type="text">
+        <input class="form-control" id="inputURL" name="inputURLString"
+            placeholder="e.g. http://www.google.com/search?&q=nyancat" type="text">
+
             <span class="input-group-btn">
-              <button class="btn btn-default" type="button">Detox it!</button>
+              <button class="btn btn-default" type="submit">Detox it!</button>
             </span>
       </div>
+     </form>
     </div>
 
     </div>
