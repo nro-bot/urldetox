@@ -1,10 +1,30 @@
 {% extends 'layouts/main.html' %}
-{% block title %}Home{% endblock %}
+{% block title %}URL Detox: Home (by nouyang){% endblock %}
 {% block content %}
 
-<div class="page-header">
-  <h1>Sticky footer with fixed navbar</h1>
+<div class="jumbotron jumbotron-fluid">
+      <h1>URL Detox</h1>
+        <p>I got fed up with links that are stupidly long so that companies can track my web
+        activity, so I wrote a little script to remove the excess.</p>
 </div>
-<p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added within <code>#wrap</code> with <code>padding-top: 60px;</code> on the <code>.container</code>.</p>
+
+    <legend>URL</legend>
+    <div class="form-group">
+      <!--<label for="inputURL" class="col-lg-4 control-label">URL</label>-->
+      <div class="input-group">
+        <input class="form-control" id="inputURL"
+        placeholder="e.g. http://www.google.com/search?&q=nyancat" type="text">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">Detox</button>
+            </span>
+      </div>
+    </div>
+
+        <!--<div class="form-group">-->
+      <!--<div class="col-lg-10 col-lg-offset-2">-->
+        <!--<button type="reset" class="btn btn-default">Cancel</button>-->
+        <!--<button type="submit" class="btn btn-primary">Submit</button>-->
+      <!--</div>-->
+    <!--</div>-->
 
 {% endblock %}
