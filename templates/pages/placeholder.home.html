@@ -1,13 +1,14 @@
 {% extends 'layouts/main.html' %}
-{% block title %}URL Detox: Home (by nouyang){% endblock %}
-{% block content %}
+{% block title %}URL Detox (by nouyang){% endblock %}
 
+{% block jumbo %}
 <div class="jumbotron jumbotron-fluid">
+    <div class="container">
       <h1>URL Detox</h1>
         <p>I got fed up with links that are stupidly long so that companies can track my web
         activity, so I wrote a little script to remove the excess.</p>
-</div>
 
+          <hr class="my-4">
     <legend>URL</legend>
     <div class="form-group">
       <!--<label for="inputURL" class="col-lg-4 control-label">URL</label>-->
@@ -20,6 +21,10 @@
       </div>
     </div>
 
+    </div>
+</div>
+{% endblock %}
+{% block content %}
         <!--<div class="form-group">-->
       <!--<div class="col-lg-10 col-lg-offset-2">-->
         <!--<button type="reset" class="btn btn-default">Cancel</button>-->
