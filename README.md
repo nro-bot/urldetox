@@ -139,8 +139,17 @@ links.
 
 ## Todo
 
-There's a lot of CSS stuff I want to fix. An easy one would be to add the print out of how many
-hara
+There's a lot of CSS stuff I want to fix. 
+
+* An easy one would be to add the print out of how many
+characters were saved (% shortening) -- this is already printed out to console, but not displayed in
+app. 
+* Maybe make the "glow" effect when clicking into the input box
+* Make the "result" section wrap correctly in more browsers (firefox seems fine)
+* Make it possible to 'ctrl-a' the link (e.g. stick it in a textbox)
+* Make a button to automatically copy to your clipboard
+* Throw some grumpiness if person didn't enter in a URL
+* Make a little 'up arrow' counter to track if anyone else found this useful
 
 # Thanks
 
