@@ -8,6 +8,7 @@ http://urldetox.nfshost.com/
 
 (I may move to http://urldetox.pythonanywhere.com depending on how much the NFShost costs) 
 
+Currently, this project has rather hack-ish hardcoding support for amazon, google, and ebay.
 
 ## Example
 ```
@@ -18,7 +19,10 @@ Cleaning URL:
 DONE. Cleaned url:
  https://www.amazon.com/Streaming-Media-Players/b/ref=tv_nav_vid_dm?node=13447451
  ```
-Currently, rather hack-ish hardcoding to support amazon, google, and ebay.
+
+
+For more:
+https://gist.github.com/nouyang/0834e5bce03a0f27f64da06636e1371f
 
 ## Quickstart (Local)
 
@@ -37,7 +41,6 @@ To debug, you can run the cleaning (detox, stripping, etc.) script directly on t
 ```
 python3 clean.py 'http://yoururl.com/?q=some-parameters'
 ```
-
 
 ## Notes
 SOURCE CODE for flask boilerplate:
@@ -117,12 +120,30 @@ Out[161]:
 
 ```
 
+
+### Notes on 'algorithm' (hardcoded rules)
+
+On Ebay, I found that parameters whos names began with "LH" were used to filter the 
+The Amazon links were really annoying to deal with. I feel like most of the time I just want to link
+people to products anyway, so I dealt with that easy case and made an attempt at URLs you might get
+if you wanted to link someone to a search you did. Annoyingly, for amazon the `ref` parameter does
+seem to affect the page you get when you enter in a link.
+
+If we don't find a "known" website in the url, then it passes through and we just strip the url of
+any obvious ones such as "utm" and "ref".
+
 ## Similar project
 
 urlclean.com -- but it only supports Google links, so I went ahead and made my own to support more
 links.
 
+## Todo
+
+There's a lot of CSS stuff I want to fix. An easy one would be to add the print out of how many
+hara
 
 # Thanks
 
-I welcome contributions. I can be contacted at `githubusername@alum.mit.edu`.
+I welcome contributions of code, bug reports, feature wishes, or indication if you found this useful. 
+
+I can be contacted at `githubusername@alum.mit.edu`.
