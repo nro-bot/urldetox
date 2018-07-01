@@ -40,42 +40,24 @@
   <div id="wrap">
 
     <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">URL Detox</a>
-        </div>
-      </div>
-    </div>
+    <!--<div class="navbar navbar-default navbar-fixed-top">-->
+    <!--<div class="navbar  navbar-expand-lg navbar-dark bg-primary">-->
+    <!--<div class="navbar  navbar-expand-lg navbar-dark bg-primary">-->
+    <!--</div>-->
 
     <!-- Begin page content -->
     <main id="content" role="main" class="container">
 
-      {% with messages = get_flashed_messages() %}
-        {% if messages %}
-          {% for message in messages %}
-            <div class="alert alert-block alert-error fade in">
-              <a class="close" data-dismiss="alert">&times;</a>
-              {{ message }}
-            </div>
-          {% endfor %}
-        {% endif %}
-      {% endwith %}
-
+    {% block jumbo %}{% endblock %}
       {% block content %}{% endblock %}
       
     </main>
-
   </div>
 
   <div id="footer">
     <div class="container">
-      <p>Your Company &copy; All Rights Reserved.</p>
+        <p class="lead"> @<a href="http://nancyouyang.com">nouyang</a> | 2018 | <a
+            href="https://github.com/nouyang/urldetox">Github Source</a></p>
       {% block footer %}{% endblock %}
     </div>
   </div>
