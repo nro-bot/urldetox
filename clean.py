@@ -82,9 +82,11 @@ def clean_url(input_url_str):
     ######## GENERIC ########
     # Use BLACKLIST instead.
     else:
+        print('hi')
         todel = []
+        print(query_params)
         for key in query_params.keys():
-            if 'utm' or 'ref' in key:
+            if 'utm' in key or 'ref' in key:
                 todel.append(key)
         for k in todel:
             query_params.pop(k, None)
