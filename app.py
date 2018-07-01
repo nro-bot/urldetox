@@ -46,7 +46,7 @@ def login_required(test):
 def home():
     if request.method == 'POST':
         url = request.form['inputURLString']
-        return render_template('pages/home.html', cleaned_url = clean.clean_url(url))
+        return render_template('pages/home.html', orig_url = url, cleaned_url = clean.clean_url(url))
     else:
         return render_template('pages/home.html')
 

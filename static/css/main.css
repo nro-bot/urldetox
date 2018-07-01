@@ -34,3 +34,15 @@ a {
  ****************************************************************************/
 
 /* Various other styles end */
+
+
+.all-copy {
+  -webkit-user-select: all;  /* Chrome all / Safari all */
+  -moz-user-select: all;     /* Firefox all */
+  -ms-user-select: all;      /* IE 10+ */
+  user-select: all;          /* Likely future */
+}
+
+.all-contains{
+  user-select: contains;          /* Likely future */
+}

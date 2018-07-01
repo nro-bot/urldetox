@@ -3,36 +3,44 @@
 
 {% block jumbo %}
 <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <p class="pull-center"><h1>URL Detox</h1>
-          <hr class="my-4">
+  <div class="container">
+    <h1>URL Detox</h1>
 
-        <p>I got fed up with links that are stupidly long so that companies can track my web
-        activity, so I wrote a little script to remove the excess.</p>
+    <hr class="my-4">
 
-          <hr class="my-4">
-    <legend>Enter your URL below:</legend>
+    <p>I got fed up with links that are stupidly long so that companies can track my web
+    activity, so I wrote a little script to remove the excess.</p>
 
-        <form action="." method="POST">
-            <div class="form-group">
-              <!--<label for="inputURL" class="col-lg-4 control-label">URL</label>-->
-              <div class="input-group">
+      <hr class="my-4">
+        <legend>Enter your URL below:</legend>
 
-                        <input class="form-control" id="inputURL" name="inputURLString"
-                            placeholder="e.g. http://www.google.com/search?&q=nyancat" type="text">
+            <form action="." method="POST">
+                 <div class="form-group">
+                  <!--<label for="inputURL" class="col-lg-4 control-label">URL</label>-->
+                  <div class="input-group">
 
-                            <span class="input-group-btn"> <button class="btn btn-default" type="submit">Detox it!</button>
-                            </span>
+                    <input class="form-control" id="inputURL" name="inputURLString"
+                        placeholder="e.g. http://www.google.com/search?&q=nyancat" type="text">
 
-              </div>
-            </div>
-        </form>
+                    <span class="input-group-btn"> <button class="btn btn-default" type="submit">Detox it!</button>
+                    </span>
+
+                  </div>
+                </div>
+            </form>
 
 
-        {% if cleaned_url %}
-        Result:
-        <h2> {{ cleaned_url }}</h2>
+    {% if cleaned_url %}
+      <hr class="my-4">
+      <p class="lead">You entered: </p>
+      <p>{{ orig_url }}</p>
+      <p class="lead">Result: </p>
+      <div class="container bg-success">
+          <p>{{ cleaned_url }}</p>
+     </div>
+
         {% endif %}
+
     </div>
 </div>
 {% endblock %}
