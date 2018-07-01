@@ -46,7 +46,7 @@ python3 clean.py 'http://yoururl.com/?q=some-parameters'
 SOURCE CODE for flask boilerplate:
 https://github.com/realpython/flask-boilerplate/
 
-https://bootswatch.com/sandstone/k
+https://bootswatch.com/sandstone/
 
 To deploy, see django:
 https://blog.nearlyfreespeech.net/2014/11/17/how-to-django-on-nearlyfreespeech-net/
