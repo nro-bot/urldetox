@@ -12,19 +12,27 @@
 
           <hr class="my-4">
     <legend>Enter your URL below:</legend>
-    <div class="form-group">
-      <!--<label for="inputURL" class="col-lg-4 control-label">URL</label>-->
-      <div class="input-group">
 
-        <input class="form-control" id="inputURL" name="inputURLString"
-            placeholder="e.g. http://www.google.com/search?&q=nyancat" type="text">
+        <form action="." method="POST">
+            <div class="form-group">
+              <!--<label for="inputURL" class="col-lg-4 control-label">URL</label>-->
+              <div class="input-group">
 
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="submit">Detox it!</button>
-            </span>
-      </div>
-    </div>
+                        <input class="form-control" id="inputURL" name="inputURLString"
+                            placeholder="e.g. http://www.google.com/search?&q=nyancat" type="text">
 
+                            <span class="input-group-btn"> <button class="btn btn-default" type="submit">Detox it!</button>
+                            </span>
+
+              </div>
+            </div>
+        </form>
+
+
+        {% if cleaned_url %}
+        Result:
+        <h2> {{ cleaned_url }}</h2>
+        {% endif %}
     </div>
 </div>
 {% endblock %}

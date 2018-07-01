@@ -15,6 +15,9 @@ def delargs(url_params, whitelist_keys, url_data):
     return clean_url
 
 def clean_url(input_url_str):
+    if len(input_url_str) == 0:
+        return input_url_str
+
     print('Cleaning URL:\n', input_url_str, '\n')
     # clean_url = ''
 
